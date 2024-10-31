@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_project_assessment/presentation/features/authentication/controllers/login_controller.dart';
+import 'package:flutter_project_assessment/presentation/features/users/screens/users_screen.dart';
 import 'package:flutter_project_assessment/presentation/theme/colors/app_colors.dart';
 import 'package:flutter_project_assessment/presentation/theme/dimensions/app_dimensions.dart';
 import 'package:flutter_project_assessment/presentation/theme/styles/app_styles.dart';
@@ -194,8 +195,9 @@ class _LoginScreenState extends State<LoginScreen> {
                               /// For Sign In Button
                               ReusableCustomButtonWidget(
                                 onTap: () {
-                                  if (_formKey.currentState!.validate()) {
-                                  }
+                                  // if (_formKey.currentState!.validate()) {
+                                  // }
+                                  Get.offNamedUntil(UsersScreen.routeName, (route) => false);
                                 },
                                 title: Text('Sign In',
                                     style: myStyleRobotoCustom(fontSize: 14,

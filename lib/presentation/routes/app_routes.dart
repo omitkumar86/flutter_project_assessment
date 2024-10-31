@@ -7,7 +7,7 @@ import '../features/splash/screen/splash_screen.dart';
 
 class AppRoutes {
    static final routes = [
-     GetPage(name: SplashScreen.routeName, page: () => const SplashScreen()),
+     GetPage(name: SplashScreen.routeName, page: () => SplashScreen()),
      GetPage(name: LoginScreen.routeName, page: () => const LoginScreen(), transition: Transition.rightToLeft, transitionDuration: const Duration(milliseconds: 500)),
      GetPage(name: UsersScreen.routeName, page: () => const UsersScreen(), transition: Transition.rightToLeft, transitionDuration: const Duration(milliseconds: 500)),
      GetPage(name: UsersDetailsScreen.routeName, page: () => const UsersDetailsScreen(), transition: Transition.rightToLeft, transitionDuration: const Duration(milliseconds: 500)),

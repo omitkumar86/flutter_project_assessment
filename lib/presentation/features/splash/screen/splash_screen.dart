@@ -1,39 +1,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_project_assessment/core/utils/constants/images/app_images.dart';
-import 'package:flutter_project_assessment/presentation/features/authentication/screens/login_screen.dart';
+import 'package:flutter_project_assessment/presentation/features/splash/controller/splash_controller.dart';
 import 'package:flutter_project_assessment/presentation/theme/colors/app_colors.dart';
 import 'package:flutter_project_assessment/presentation/theme/dimensions/app_dimensions.dart';
 import 'package:flutter_project_assessment/presentation/theme/styles/app_styles.dart';
 import 'package:get/get.dart';
 import 'package:shimmer/shimmer.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   static const String routeName = '/splash';
-  const SplashScreen({super.key});
+  SplashScreen({super.key});
 
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(const Duration(milliseconds: 3000), () {
-      Get.offNamedUntil(LoginScreen.routeName, (route) => false);
-    });
-  }
-
-  /// Check Token
-  bool checkToken(dynamic token) {
-    if (token == null || token == "") {
-      return false;
-    } else {
-      return true;
-    }
-  }
+  final SplashController splashController = Get.find<SplashController>();
 
   @override
   Widget build(BuildContext context) {
